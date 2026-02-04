@@ -15,6 +15,7 @@
 \usepackage[a4paper,left=.4in,right=.4in,top=.4in,bottom=.4in]{geometry}
 \usepackage{lastpage}
 \usepackage{xcolor}
+\usepackage{paracol}
 \AtBeginDocument{\color{darkgray}}
 
 \definecolor{infoboxcolor}{gray}{.97}
@@ -84,19 +85,15 @@
 	\end{adjustbox}
 \end{minipage}
 
-%\bigskip
+% Separation between header and main content
+\vspace{2em}
 
-\begin{minipage}[t][][t]{\lcolsize}
-	\input{exp}
-	\bigbreak
-	\input{edu}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t][][t]{\rcolsize}
-	%\input{part}
-	%\bigbreak
-	\input{skills}
-	\bigbreak
-	\input{pub}
-\end{minipage}
+% Content in a single column and in the requested order
+\input{exp}
+\bigbreak
+\input{edu}
+\bigbreak
+\input{skills}
+\bigbreak
+\input{pub}
 \end{document}
